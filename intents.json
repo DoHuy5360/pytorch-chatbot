@@ -1,84 +1,65 @@
 {
-  "intents": [
-    {
-      "tag": "greeting",
-      "patterns": [
-        "Hi",
-        "Hey",
-        "How are you",
-        "Is anyone there?",
-        "Hello",
-        "Good day"
-      ],
-      "responses": [
-        "Hey :-)",
-        "Hello, thanks for visiting",
-        "Hi there, what can I do for you?",
-        "Hi there, how can I help?"
-      ]
-    },
-    {
-      "tag": "goodbye",
-      "patterns": ["Bye", "See you later", "Goodbye"],
-      "responses": [
-        "See you later, thanks for visiting",
-        "Have a nice day",
-        "Bye! Come back again soon."
-      ]
-    },
-    {
-      "tag": "thanks",
-      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
-      "responses": ["Happy to help!", "Any time!", "My pleasure"]
-    },
-    {
-      "tag": "items",
-      "patterns": [
-        "Which items do you have?",
-        "What kinds of items are there?",
-        "What do you sell?"
-      ],
-      "responses": [
-        "We sell coffee and tea",
-        "We have coffee and tea"
-      ]
-    },
-    {
-      "tag": "payments",
-      "patterns": [
-        "Do you take credit cards?",
-        "Do you accept Mastercard?",
-        "Can I pay with Paypal?",
-        "Are you cash only?"
-      ],
-      "responses": [
-        "We accept VISA, Mastercard and Paypal",
-        "We accept most major credit cards, and Paypal"
-      ]
-    },
-    {
-      "tag": "delivery",
-      "patterns": [
-        "How long does delivery take?",
-        "How long does shipping take?",
-        "When do I get my delivery?"
-      ],
-      "responses": [
-        "Delivery takes 2-4 days",
-        "Shipping takes 2-4 days"
-      ]
-    },
-    {
-      "tag": "funny",
-      "patterns": [
-        "Tell me a joke!",
-        "Tell me something funny!",
-        "Do you know a joke?"
-      ],
-      "responses": [
-        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
-        "What did the buffalo say when his son left for college? Bison."
-      ]
-    }
-  ]
+	"intents": [
+		{
+			"tag": "greeting",
+			"patterns": ["Xin chào", "Hi", "Hello"],
+			"responses": [
+				"IT Connect Portal xin chào quý Thầy/Cô/Sinh viên ! Vui lòng chọn các lĩnh vực liên quan.\n 1. Câu hỏi liên quan đến Office 365\n 2. Câu hỏi cài đặt phần mềm\n 3. Câu hỏi liên quan trang Online.vlu.edu.vn\n 4. Câu hỏi liên quan Elearning\n 5. Câu hỏi liên quan đến trang cte\n"
+			]
+		},
+		{
+			"tag": "outlookRules",
+			"patterns": ["Rules", "rules Outlook", "Cách tạo Rules trên Outlook để email tự động vào từng folder thì thực hiện ra sao?"],
+			"responses": ["Kính gửi quý Thầy/Cô, Khi muốn tạo Rules trên outlook thì có thể xem chi tiết tại đây: https://itconnect.vlu.edu.vn/blog/post/huong-dan-tao-rules-tren-microsoft-outlook"]
+		},
+		{
+			"tag": "changePhoneNumberOn365",
+			"patterns": ["thay đổi số điện thoại trên office 365", "cập nhật số điện thoại", "Muốn thay đổi số điện thoại cho Office 365 thì thực hiện như thế nào?"],
+			"responses": ["Thực hiện đăng nhập vào webmail & thực hiện đổi ( có thể xem chi tiết tại đây: https://itconnect.vlu.edu.vn/blog/post/huong-dan-cap-nhat-sdt-tao-xac-thuc-da-yeu-mfa)"]
+		},
+		{
+			"tag": "resetEmailPassword",
+			"patterns": ["reset password email", "reset mật khẩu email", "Em muốn reset password email thì cần làm gì?"],
+			"responses": [
+				"Sinh viên thân mến, Nếu bạn quên password email & muốn reset password mới thì các bạn gửi mail về địa chỉ mail: p.cntt@vanlanguni.edu.vn . Đồng thời cung cấp đầy đủ thông tin Họ và tên, Mã số Sinh Viên, địa chỉ email."
+			]
+		},
+		{
+			"tag": "guideToChangeEmailPassword",
+			"patterns": ["hướng dẫn thay đổi mật khẩu mail", "Có thể hướng dẫn e đổi mật khẩu mail được không?"],
+			"responses": [
+				"Sinh viên thân mến, Để thực hiện thay đổi mật khẩu mail ( có thể xem chi tiết tại đây: https://itconnect.vlu.edu.vn/blog/post/huong-dan-thay-doi-mat-khau-email-danh-cho-sinh-vien)"
+			]
+		},
+		{
+			"tag": "InstallAppAsStudentRole",
+			"patterns": ["Cài đặt phần mềm", "Cần cài đặt phần mềm chuẩn bị cho tiết học thì như thế nào?"],
+			"responses": ["Sinh viên thân mến, Khi cần cài đặt phần mềm để phục vụ cho việc học, vui lòng đến trực tiếp Phòng Công Nghệ Thông Tin & điền các thông tin cần thiết tại khu vực tiếp nhận."]
+		},
+		{
+			"tag": "InstallAppAsLecturerRole",
+			"patterns": ["Cài đặt phần mềm", "Cần cài đặt phần mềm hỗ trợ công việc thì phải làm gì?"],
+			"responses": ["Kính gửi quý Thầy/Cô, Muốn cài đặt phần mềm thì quý Thầy/Cô có thể tạo yêu cầu tại trang servicedesk.vlu.edu.vn hoặc gửi mail về phòng CNTT"]
+		},
+		{
+			"tag": "InstallUIS_application",
+			"patterns": ["phần mềm UIS", "Có thể cài đặt phần mềm UIS trên máy tính được không?"],
+			"responses": ["Kính gửi quý Thầy/Cô, Muốn cài đặt phần mềm thì quý Thầy/Cô có thể tạo yêu cầu tại trang servicedesk.vlu.edu.vn hoặc gửi mail về phòng CNTT"]
+		},
+		{
+			"tag": "AssistChangePasswordOnOnline_page",
+			"patterns": ["trang online", "web online", "trang_online", "Hỗ trợ reset lại mật khẩu trang online."],
+			"responses": ["Muốn reset lại mật khẩu trang online các bạn cần gửi mail về p.cntt@vanlanguni.edu.vn & cung cấp các thông tin sau: Họ và tên, Mã số SV, email"]
+		},
+		{
+			"tag": "CanNotLoginToCTE_page",
+			"patterns": ["không đăng nhập vào CTE", "login CTE", "Không đăng nhập được vào trang web CTE."],
+			"responses": ["Để đăng nhập vào trang web CTE các bạn thực đăng nhập bằng tài khoản VLID và Password email"]
+		},
+		{
+			"tag": "CanNotFindExamCourse",
+			"patterns": ["không tìm thấy course thi", "khong tim thay course thi", "course bài thi", "Trên trang CTE của em không thấy Course thi"],
+			"responses": ["Sinh viên thân mến, Liên quan đến không thấy course thi e vui lòng liên hệ t.khaothi@vlu.edu.vn để được trợ. "]
+		}
+	]
 }
